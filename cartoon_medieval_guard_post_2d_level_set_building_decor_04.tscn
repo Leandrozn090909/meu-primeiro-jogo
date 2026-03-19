@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dkusrxid2m3fr"]
+
+[ext_resource type="Texture2D" uid="uid://bx1i0x8ueapvp" path="res://assets/craftpix-net-747300-free-cartoon-medieval-guard-post-vector-game-tileset/PNG/Building/Cartoon_Medieval_Guard_Post_2D_Level_Set_Building - Decor 04.png" id="1_rcwn0"]
+
+[node name="CartoonMedievalGuardPost2dLevelSetBuildingDecor04" type="Sprite2D" unique_id=127843029]
+position = Vector2(643, 415)
+texture = ExtResource("1_rcwn0")

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bcwhhwbu5flim"]
+
+[ext_resource type="Texture2D" uid="uid://c7x4j3tl3kng3" path="res://assets/craftpix-net-803217-free-knight-character-sprites-pixel-art/Knight_1/Idle.png" id="1_rwm0n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s027a"]
+atlas = ExtResource("1_rwm0n")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14505"]
+atlas = ExtResource("1_rwm0n")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wcc8"]
+atlas = ExtResource("1_rwm0n")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sknh"]
+atlas = ExtResource("1_rwm0n")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0gfpk"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s027a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14505")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4wcc8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sknh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_0hrit"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5c66"]
+_data = {
+&"idle": SubResource("Animation_0hrit")
+}
+
+[node name="Player" type="Node2D" unique_id=581293412]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1223299059]
+sprite_frames = SubResource("SpriteFrames_0gfpk")
+animation = &"idle"
+frame = 3
+frame_progress = 0.29712975
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1066050490]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=176515143]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=310994106]
+libraries/ = SubResource("AnimationLibrary_o5c66")
